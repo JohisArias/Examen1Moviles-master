@@ -1,33 +1,37 @@
 <resources>
     <string name="app_name">Books and Authors</string>
     <string name="libro">Book</string>
+
+    <string name="name">Name:</string>
+    <string name="last_name">Last Name:</string>
+    <string name="fecha_nacimiento">Birthday:</string>
+    <string name="numero_libros">Number of Books:</string>
+    <string name="ecuatoriano">Is Ecuadorian?:</string>
+    <string name="isbn">ISBN:</string>
+    <string name="numero_paginas">Number of Pages:</string>
+    <string name="edicion">Number of Edition:</string>
+    <string name="fecha_publicacion">Publication Date:</string>
+    <string name="editorial">Editorial\'s Name:</string>
+
     <string name="autor">Author</string>
     <string name="details_btn">Details</string>
     <string name="create_btn">Save</string>
     <string name="create">Create</string>
     <string name="list_btn">List</string>
-    <string name="new_btn">New</string>
+    <string name="new_btn">New Book</string>
     <string name="menu_edit">Edit</string>
     <string name="menu_delete">Delete</string>
+
     <string name="menu_share">Share</string>
     <string name="details_autor">Author Details</string>
-    <string name="create_autor">Author Creation</string>
+    <string name="create_autor">Create Author</string>
     <string name="edit_autor">Edit Author</string>
     <string name="details_book">Book Details</string>
-    <string name="create_book">Book Creation</string>
+    <string name="create_book">Create Book</string>
     <string name="edit_book">Edit Book</string>
-    <string name="book_listt">Book\'s List</string>
-    <string name="name">Name:</string>
-    <string name="last_name">Last Name:</string>
-    <string name="fecha_nacimiento">Birthday:</string>
-    <string name="numero_libros"># Books:</string>
-    <string name="ecuatoriano">Ecuadorian:</string>
-    <string name="isbn">ISBN:</string>
-    <string name="numero_paginas"># Pages:</string>
-    <string name="edicion">Edition:</string>
-    <string name="fecha_publicacion">Publication Date:</string>
-    <string name="editorial">Editorial:</string>
+    <string name="book_listt">Book\'s Author</string>
+
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="confirmation">Are you sure you want to delete?</string>
+    <string name="confirmation">Are you sure that you want to delete?</string>
 </resources>

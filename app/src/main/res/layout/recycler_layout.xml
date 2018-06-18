@@ -3,7 +3,7 @@
     android:id="@+id/relative_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?android:attr/selectableItemBackground"
+    android:background="@drawable/booooook"
     android:clickable="true"
     android:focusable="true"
     android:orientation="vertical"
@@ -32,7 +32,6 @@
         android:layout_width="230dp"
         android:layout_height="35dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/txt_2" />
 
     <Button

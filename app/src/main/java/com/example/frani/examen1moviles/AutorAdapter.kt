@@ -1,4 +1,4 @@
-package com.example.jpas.examen1moviles
+package com.example.frani.examen1moviles
 
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
@@ -41,16 +41,14 @@ class AutorAdapter(private val autorsList: List<Autor>) : RecyclerView.Adapter<A
         }
     }
 
-    //override fun...
-    fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context)
                 .inflate(R.layout.recycler_layout, parent, false)
 
         return MyViewHolder(itemView)
     }
 
-    //override fun...
-    fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val autor = autorsList[position]
         holder.nombre.text = autor.nombre
         holder.fechaNacimiento.text = autor.fechaNacimiento
@@ -68,8 +66,7 @@ class AutorAdapter(private val autorsList: List<Autor>) : RecyclerView.Adapter<A
         }
     }
 
-    //override fun...
-    fun getItemCount(): Int {
+    override fun getItemCount(): Int {
         return autorsList.size
     }
 
