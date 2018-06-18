@@ -1,4 +1,4 @@
-package com.example.jpas.examen1moviles
+package com.example.frani.examen1moviles
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -8,7 +8,7 @@ import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.MenuItem
-import com.example.jpas.examen1moviles.R.id.recycler_view
+import kotlinx.android.synthetic.main.activity_list.*
 
 class ListActivity : AppCompatActivity() {
 
@@ -16,8 +16,7 @@ class ListActivity : AppCompatActivity() {
     lateinit var autores: ArrayList<Autor>
     lateinit var dbHandler: DBAutorHandlerAplicacion
 
-    //override fun...
-    fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
 
@@ -34,8 +33,7 @@ class ListActivity : AppCompatActivity() {
         registerForContextMenu(recycler_view)
     }
 
-    //override fun...
-    fun onContextItemSelected(item: MenuItem): Boolean {
+    override fun onContextItemSelected(item: MenuItem): Boolean {
         var position = adaptador.getPosition()
         var autor = autores[position]
 
@@ -59,7 +57,7 @@ class ListActivity : AppCompatActivity() {
                 val builder = AlertDialog.Builder(this)
                 builder.setMessage(R.string.confirmation)
                         .setPositiveButton(R.string.yes, { dialog, which ->
-                            dbHandler.eliminarAutor(autor.id)
+                            dbHandler.deleteAutor(autor.id)
                             finish()
                             startActivity(intent)
                         }

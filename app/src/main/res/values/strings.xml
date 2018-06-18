@@ -1,33 +1,37 @@
 <resources>
     <string name="app_name">Libros y Autores</string>
     <string name="libro">Libro</string>
+
+    <string name="name">Nombre:</string>
+    <string name="last_name">Apellidos:</string>
+    <string name="fecha_nacimiento">Fecha de  Nacimiento:</string>
+    <string name="numero_libros">Numero de Libros:</string>
+    <string name="ecuatoriano">Es ecuatoriano?:</string>
+    <string name="isbn">ISBN:</string>
+    <string name="numero_paginas">Numero de Paginas:</string>
+    <string name="edicion">Numero de Edicion:</string>
+    <string name="fecha_publicacion">Fecha de  Publicacion:</string>
+    <string name="editorial">Nombre de Editorial:</string>
+
     <string name="autor">Autor</string>
     <string name="details_btn">Detalles</string>
     <string name="create_btn">Guardar</string>
     <string name="create">Crear</string>
     <string name="list_btn">Listar</string>
-    <string name="new_btn">Nuevo</string>
+    <string name="new_btn">Agregar Libro</string>
     <string name="menu_edit">Editar</string>
     <string name="menu_delete">Eliminar</string>
     <string name="menu_share">Compartir</string>
-    <string name="details_autor">Detalles Autor</string>
-    <string name="create_autor">Creacion Autor</string>
+
+    <string name="details_autor">Detalle de Autor</string>
+    <string name="create_autor">Crear Autor</string>
     <string name="edit_autor">Editar Autor</string>
-    <string name="details_book">Detalles Libro</string>
+    <string name="details_book">Detalle de Libro</string>
     <string name="create_book">Creacion Libro</string>
     <string name="edit_book">Editar Libro</string>
-    <string name="book_listt">Lista Libros</string>
-    <string name="name">Nombre:</string>
-    <string name="last_name">Apellido:</string>
-    <string name="fecha_nacimiento">Fecha Nacimiento:</string>
-    <string name="numero_libros">Numero Libros:</string>
-    <string name="ecuatoriano">Ecuatoriano:</string>
-    <string name="isbn">ISBN:</string>
-    <string name="numero_paginas">Numero Paginas:</string>
-    <string name="edicion">Edicion:</string>
-    <string name="fecha_publicacion">Fecha Publicacion:</string>
-    <string name="editorial">Editorial:</string>
+    <string name="book_listt">Libros de Autor</string>
+
     <string name="yes">Si</string>
     <string name="no">No</string>
-    <string name="confirmation">Seguro desea eliminar?</string>
+    <string name="confirmation">Esta seguro que desea eliminar?</string>
 </resources>

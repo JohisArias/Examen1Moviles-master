@@ -1,10 +1,10 @@
-package com.example.jpas.examen1moviles
+package com.example.frani.examen1moviles
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.jpas.examen1moviles.R.id.*
+import kotlinx.android.synthetic.main.activity_crear.*
 
 class CreateActivity : AppCompatActivity() {
 
@@ -12,8 +12,7 @@ class CreateActivity : AppCompatActivity() {
     var autor: Autor? = null
     var tipo = false
 
-    //override fun...
-    fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crear)
 
@@ -55,7 +54,7 @@ class CreateActivity : AppCompatActivity() {
             dbHandler.insertarAutor(autor)
         } else {
             var autor = Autor(autor?.id!!, nombre, apellido, fecha, numeroLibros, ecutoriano)
-            dbHandler.actualizarAutor(autor)
+            dbHandler.updateAutor(autor)
         }
 
         irAListView()

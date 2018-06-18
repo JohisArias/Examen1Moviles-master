@@ -1,11 +1,10 @@
-package com.example.jpas.examen1moviles
+package com.example.frani.examen1moviles
 
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.*
 import android.widget.Button
 import android.widget.TextView
-//import android.R
 
 class LibroAdapter(private val librosList: List<Libro>) : RecyclerView.Adapter<LibroAdapter.MyViewHolder>() {
 
@@ -41,20 +40,18 @@ class LibroAdapter(private val librosList: List<Libro>) : RecyclerView.Adapter<L
         }
     }
 
-//override fun...
-    fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context)
                 .inflate(R.layout.recycler_layout, parent, false)
 
         return MyViewHolder(itemView)
     }
 
-    //override fun...
-    fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val libro = librosList[position]
         holder.nombre.text = libro.nombre
         holder.fechaPublicacion.text = libro.fechaPublicacion
-        holder.editorial.text = libro.Editorial
+        holder.editorial.text = libro.nombreEditorial
         holder.libro = libro
         holder.detalles.setOnClickListener{
             v: View ->
@@ -68,8 +65,7 @@ class LibroAdapter(private val librosList: List<Libro>) : RecyclerView.Adapter<L
         }
     }
 
-    //override fun...
-    fun getItemCount(): Int {
+    override fun getItemCount(): Int {
         return librosList.size
     }
 

@@ -1,4 +1,4 @@
-package com.example.jpas.examen1moviles
+package com.example.frani.examen1moviles
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -9,7 +9,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
-import com.example.jpas.examen1moviles.R.id.*
+import kotlinx.android.synthetic.main.activity_details.*
 
 class DetailsActivity : AppCompatActivity() {
 
@@ -63,7 +63,7 @@ class DetailsActivity : AppCompatActivity() {
                 val intent = Intent(Intent.ACTION_SEND)
                 intent.type = "text/html"
                 intent.putExtra(Intent.EXTRA_SUBJECT, "${getString(R.string.libro)} - ${getString(R.string.app_name)}")
-                intent.putExtra(Intent.EXTRA_TEXT, "${getString(R.string.isbn)} ${libro.isbn}\n${getString(R.string.name)} ${libro.nombre}\n${getString(R.string.edicion)} ${libro.edicion}\n${getString(R.string.editorial)} ${libro.Editorial}")
+                intent.putExtra(Intent.EXTRA_TEXT, "${getString(R.string.isbn)} ${libro.icbn}\n${getString(R.string.name)} ${libro.nombre}\n${getString(R.string.edicion)} ${libro.edicion}\n${getString(R.string.editorial)} ${libro.nombreEditorial}")
                 startActivity(intent)
                 return true
             }
@@ -78,7 +78,7 @@ class DetailsActivity : AppCompatActivity() {
                 val builder = AlertDialog.Builder(this)
                 builder.setMessage(R.string.confirmation)
                         .setPositiveButton(R.string.yes, { dialog, which ->
-                            dbHandler.eliminarLibro(libro.isbn)
+                            dbHandler.deleteLibro(libro.icbn)
                             finish()
                             startActivity(intent)
                         }

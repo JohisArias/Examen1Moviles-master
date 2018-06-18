@@ -1,4 +1,4 @@
-package com.example.jpas.examen1moviles
+package com.example.frani.examen1moviles
 
 import android.os.Parcel
 import android.os.Parcelable

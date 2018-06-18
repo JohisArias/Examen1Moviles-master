@@ -1,4 +1,4 @@
-package com.example.jpas.examen1moviles
+package com.example.frani.examen1moviles
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

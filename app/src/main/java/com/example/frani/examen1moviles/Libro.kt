@@ -1,9 +1,9 @@
-package com.example.jpas.examen1moviles
+package com.example.frani.examen1moviles
 
 import android.os.Parcel
 import android.os.Parcelable
 
-class Libro(var isbn: Int, var nombre: String, var numeroPaginas: Int, var edicion: Int, var fechaPublicacion: String, var Editorial: String, var autorID: Int) : Parcelable {
+class Libro(var icbn: Int, var nombre: String, var numeroPaginas: Int, var edicion: Int, var fechaPublicacion: String, var nombreEditorial: String, var autorID: Int) : Parcelable {
 
     constructor(parcel: Parcel) : this(
             parcel.readInt(),
@@ -20,12 +20,12 @@ class Libro(var isbn: Int, var nombre: String, var numeroPaginas: Int, var edici
     }
 
     override fun writeToParcel(destino: Parcel?, p1: Int) {
-        destino?.writeInt(isbn)
+        destino?.writeInt(icbn)
         destino?.writeString(nombre)
         destino?.writeInt(numeroPaginas)
         destino?.writeInt(edicion)
         destino?.writeString(fechaPublicacion)
-        destino?.writeString(Editorial)
+        destino?.writeString(nombreEditorial)
         destino?.writeInt(autorID)
     }
 

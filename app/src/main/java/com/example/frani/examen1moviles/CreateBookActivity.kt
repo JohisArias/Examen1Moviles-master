@@ -1,9 +1,9 @@
-package com.example.jpas.examen1moviles
+package com.example.frani.examen1moviles
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.jpas.examen1moviles.R.id.*
+import kotlinx.android.synthetic.main.activity_create_book.*
 
 class CreateBookActivity : AppCompatActivity() {
 
@@ -12,8 +12,7 @@ class CreateBookActivity : AppCompatActivity() {
     var libro: Libro? = null
     var tipo = false
 
-    //override fun...
-    fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_book)
 
@@ -36,12 +35,12 @@ class CreateBookActivity : AppCompatActivity() {
     }
 
     fun fillFields() {
-        txtISBNLibro.setText(libro?.isbn.toString())
+        txtISBNLibro.setText(libro?.icbn.toString())
         txtNombreLibro.setText(libro?.nombre)
         txtNPagLibro.setText(libro?.numeroPaginas.toString())
         txtEdicionLibro.setText(libro?.edicion.toString())
         txtFechaPLibro.setText(libro?.fechaPublicacion)
-        txtEditorialLibro.setText(libro?.Editorial)
+        txtEditorialLibro.setText(libro?.nombreEditorial)
     }
 
     fun crearLibro() {
@@ -50,13 +49,13 @@ class CreateBookActivity : AppCompatActivity() {
         var numeroPaginas = txtNPagLibro.text.toString().toInt()
         var edicion = txtEdicionLibro.text.toString().toInt()
         var fechaP = txtFechaPLibro.text.toString()
-        var editorial = txtEditorialLibro.text.toString()
-        var libro = Libro(isbn, nombre, numeroPaginas, edicion, fechaP, editorial, idAutor)
+        var nombreEd = txtEditorialLibro.text.toString()
+        var libro = Libro(isbn, nombre, numeroPaginas, edicion, fechaP, nombreEd, idAutor)
 
         if (!tipo) {
             dbHandler.insertarLibro(libro)
         } else {
-            dbHandler.actualizarLibro(libro)
+            dbHandler.updateLibro(libro)
         }
 
         finish()
